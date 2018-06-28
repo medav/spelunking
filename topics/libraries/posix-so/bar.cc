@@ -17,7 +17,6 @@ int main() {
     void * handle = dlopen("./libfoo.so", RTLD_LAZY);
 
     if (!handle) {
-        printf("handle = 0x%lx\n", (uint64_t)handle);
         perror("dlopen");
         return 1;
     }
